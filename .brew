@@ -35,6 +35,10 @@ brew install mtr
 brew install youtube-dl
 brew install phantomjs
 brew install casperjs
+brew install htop-osx
+brew install ssh-copy-id
+brew install wget
+brew install tree
 
 # Remove outdated versions from the cellar
 brew cleanup
