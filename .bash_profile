@@ -6,10 +6,6 @@ export LANG="en_US"
 
 export ANDROID_SDK_ROOT=/usr/local/Cellar/android-sdk/r20.0.3
 
-if [ -f ~/.bashrc ]; then
-	source ~/.bashrc
-fi
-
 source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
 
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
@@ -19,6 +15,12 @@ fi
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
+
+if [ -f ~/.bashrc ]; then
+	source ~/.bashrc
+fi
+
+source /Users/jsilva/.rvm/scripts/rvm
 
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell
