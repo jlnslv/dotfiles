@@ -67,3 +67,5 @@
 	prompt = false
 [merge]
 	tool = Kaleidoscope
+[help]
+	autocorrect = 1
