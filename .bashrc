@@ -33,4 +33,4 @@ alias .....="cd ../../../.."
 
 # Custom bash prompt via kirsle.net/wizards/ps1.html
 # preview: http://jlnslv.me/HpUr
-export PS1="\[$(tput bold)\]\[$(tput setaf 4)\]\u \[$(tput sgr0)\]at \[$(tput setaf 3)\]\h \[$(tput sgr0)\]in \[$(tput setaf 5)\]\w:\n\[$(tput sgr0)\]"
+export PS1="\n\[$(tput bold)\]\[$(tput setaf 4)\]\u \[$(tput sgr0)\]at \[$(tput setaf 3)\]\h \[$(tput sgr0)\]in \[$(tput setaf 5)\]\w:\n\[$(tput sgr0)\]"
