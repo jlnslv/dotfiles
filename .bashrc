@@ -31,11 +31,6 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
-# Git branch in prompt.
-parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-}
-
 # Custom bash prompt via kirsle.net/wizards/ps1.html
 # preview: http://jlnslv.me/HpUr
-export PS1="\n\[$(tput bold)\]\[$(tput setaf 3)\]\h \[$(tput sgr0)\]in \[$(tput setaf 5)\]\w\[$(tput setaf 6)\]$(parse_git_branch):\n\[$(tput sgr0)\]"
+export PS1="\n\[$(tput bold)\]\[$(tput setaf 3)\]\h \[$(tput sgr0)\]in \[$(tput setaf 5)\]\w\[$(tput setaf 6)\]\$(__git_ps1):\n\[$(tput sgr0)\]"
