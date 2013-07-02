@@ -1,5 +1,4 @@
 # Config's directive: config name value
-# https://github.com/jigish/slate/blob/master/Slate/default.slate
 
 # Default to the current screen if the screen the reference does not exist.
 config defaultToCurrentScreen true
@@ -28,4 +27,9 @@ bind 0:ctrl ${full}
 bind up:shift;ctrl;cmd ${tophalf}
 bind down:shift;ctrl;cmd ${bottomhalf}
 bind left:shift;ctrl;cmd ${lefthalf}
-bind right:shift;ctrl;cmd ${righthalf}
+bind b:shift;cmd ${bottomleft}
+bind y:shift;cmd ${topleft}
+bind l:shift;cmd ${righthalf}
+#bind l:shift;alt;cmd ${rightthird}
+bind .:shift;cmd ${bottomright}
+bind p:shift;cmd ${topright}
