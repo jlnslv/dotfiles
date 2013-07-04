@@ -100,7 +100,7 @@ function server() {
 }
 
 # Copy w/ progress
-cp_p () {
+cpwp () {
   rsync -WavP --human-readable --progress $1 $2
 }
 
