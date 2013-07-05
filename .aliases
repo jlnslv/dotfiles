@@ -25,6 +25,7 @@ alias bl="open -a google\ chrome 'http://browserling.com'"
 
 # be nice
 alias please=sudo
+alias reload="source ~/.bash_profile"
 
 # handy things
 alias bunyip='node ~/code/bunyip/cli.js'
