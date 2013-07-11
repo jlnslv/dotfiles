@@ -41,3 +41,8 @@ set convert-meta off
 
 # Use Alt/Meta + Delete to delete the preceding word
 "\e[3;3~": kill-word
+
+# Navigate between words with Option + Arrow
+# http://brettterpstra.com/2011/08/12/option-arrow-navigation-in-iterm2/
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word
