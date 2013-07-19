@@ -19,7 +19,9 @@ npm install -g nave
 # you need the code CLI tools YOU FOOL.
 ruby <(curl -fsSkL raw.github.com/mxcl/homebrew/go)
 
-
+# https://github.com/riobard/bash-powerline
+# Powerline for Bash in pure Bash script.
+curl https://raw.github.com/riobard/bash-powerline/master/bash-powerline.sh > ~/.bash-powerline.sh
 
 # https://github.com/rupa/z
 # z, oh how i love you
