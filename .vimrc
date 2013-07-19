@@ -72,3 +72,6 @@ function! StripWhitespace ()
 	call setreg('/', old_query)
 endfunction
 noremap <leader>ss :call StripWhitespace ()<CR>
+
+" By typing :w!!, vim will ask for your sudo password
+cmap w!! %!sudo tee > /dev/null %
