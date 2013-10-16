@@ -47,3 +47,11 @@ fi
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
+
+# npm completion completion
+if [ -f /usr/local/lib/node_modules/npm/lib/utils/completion.sh ]; then
+  . /usr/local/lib/node_modules/npm/lib/utils/completion.sh
+fi
+
+# grunt completion completion
+eval "$(grunt --completion=bash)"
