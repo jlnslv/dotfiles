@@ -8,9 +8,6 @@ unset file
 # init z   https://github.com/rupa/z
 . ~/code/z/z.sh
 
-# init rvm
-source ~/.rvm/scripts/rvm
-
 
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
@@ -37,11 +34,9 @@ export LANG="en_US"
 complete -W "NSGlobalDomain" defaults
 
 # homebrew bash completion
-source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
-
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
-fi
+if [ -f /usr/local/share/bash-completion/bash_completion ]; then
+    . /usr/local/share/bash-completion/bash_completion
+  fi
 
 # git completion completion
 if [ -f ~/.git-completion.bash ]; then
@@ -52,6 +47,3 @@ fi
 if [ -f /usr/local/lib/node_modules/npm/lib/utils/completion.sh ]; then
   . /usr/local/lib/node_modules/npm/lib/utils/completion.sh
 fi
-
-# grunt completion completion
-eval "$(grunt --completion=bash)"
