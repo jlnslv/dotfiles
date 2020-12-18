@@ -8,7 +8,6 @@ unset file
 # init z   https://github.com/rupa/z
 . ~/code/z/z.sh
 
-
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
 
@@ -25,6 +24,9 @@ done
 # Prefer US English and use UTF-8
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
+export JAVA_HOME=$(/usr/libexec/java_home)
+export PATH="$HOME/.jenv/bin:$PATH"
+
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2)" scp sftp ssh
@@ -34,9 +36,10 @@ export LANG="en_US"
 complete -W "NSGlobalDomain" defaults
 
 # homebrew bash completion
-if [ -f /usr/local/share/bash-completion/bash_completion ]; then
-    . /usr/local/share/bash-completion/bash_completion
-  fi
+# if [ -f /usr/local/share/bash-completion/bash_completion ]; then
+#     . /usr/local/share/bash-completion/bash_completion
+# fi
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 # git completion completion
 if [ -f ~/.git-completion.bash ]; then
@@ -47,3 +50,7 @@ fi
 if [ -f /usr/local/lib/node_modules/npm/lib/utils/completion.sh ]; then
   . /usr/local/lib/node_modules/npm/lib/utils/completion.sh
 fi
+
+. /usr/local/etc/profile.d/z.sh
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

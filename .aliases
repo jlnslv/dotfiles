@@ -16,6 +16,8 @@ alias firefox="open -a firefox"
 alias chrome="open -a google\ chrome"
 alias chromium="open -a chromium"
 alias f='open -a Finder'
+alias gw=./gradlew
+alias dk=docker
 
 
 # general shortcuts
@@ -30,6 +32,7 @@ alias reload="source ~/.bash_profile"
 # handy things
 alias bunyip='node ~/code/bunyip/cli.js'
 alias spotify="osascript ~/code/SpotifyControl/SpotifyControl.scpt"
+alias vpn='sudo /usr/local/Cellar/openvpn/2.4.0/sbin/openvpn --config /Users/julien/Documents/client.opvn'
 
 
 # Detect which `ls` flavor is in use
@@ -103,7 +106,8 @@ alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
 alias fs="stat -f \"%z bytes\""
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; sudo npm update npm -g; sudo npm update -g; sudo gem update'
+# alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; sudo npm update npm -g; sudo npm update -g; sudo gem update'
+alias update='sudo softwareupdate -i -a; brew upgrade; brew cleanup; npm i -g npm; npm update -g; gem update'
 
 # ROT13-encode text. Works for decoding, too! ;)
 alias rot13='tr a-zA-Z n-za-mN-ZA-M'
